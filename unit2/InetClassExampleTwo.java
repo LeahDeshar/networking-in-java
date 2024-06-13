@@ -1,6 +1,8 @@
 package unit2;
 
 
+import java.net.Inet4Address;
+import java.net.Inet6Address;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -20,19 +22,19 @@ public class InetClassExampleTwo {
     }
 
     private static void Diplay(InetAddress[] address) {
-        for (InetAddress ntc : address) {
+        for (InetAddress add : address) {
             // Print the IP address
-            String ipAddress = ntc.getHostAddress();
+            String ipAddress = add.getHostAddress();
             System.out.println("IP Address: " + ipAddress);
 
             // Print the hostname
-            String hostName = ntc.getHostName();
+            String hostName = add.getHostName();
             System.out.println("Host Name: " + hostName);
 
             // Check if it is IPv4 or IPv6
-            if (ntc instanceof java.net.Inet4Address) {
+            if (add instanceof Inet4Address) {
                 System.out.println("This is an IPv4 address.");
-            } else if (ntc instanceof java.net.Inet6Address) {
+            } else if (add instanceof Inet6Address) {
                 System.out.println("This is an IPv6 address.");
             }
             System.out.println();
