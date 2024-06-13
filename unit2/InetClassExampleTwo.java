@@ -8,10 +8,10 @@ public class InetClassExampleTwo {
     public static void main(String[] args) {
         try {
             // Get all InetAddress objects for facebook.com
-            InetAddress[] inetAddresses = InetAddress.getAllByName("facebook.com");
+            InetAddress[] inetAddressesFb = InetAddress.getAllByName("facebook.com");
             InetAddress[] inetAddressesNTC = InetAddress.getAllByName("www.ntc.net.np");
 
-            Diplay(inetAddresses);
+            Diplay(inetAddressesFb);
             Diplay(inetAddressesNTC);
         } catch (UnknownHostException e) {
             System.err.println("Unable to resolve host");
@@ -19,8 +19,8 @@ public class InetClassExampleTwo {
         }
     }
 
-    private static void Diplay(InetAddress[] inetAddressesNTC) {
-        for (InetAddress ntc : inetAddressesNTC) {
+    private static void Diplay(InetAddress[] address) {
+        for (InetAddress ntc : address) {
             // Print the IP address
             String ipAddress = ntc.getHostAddress();
             System.out.println("IP Address: " + ipAddress);
