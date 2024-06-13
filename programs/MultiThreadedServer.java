@@ -1,5 +1,6 @@
+package programs;
+
 import java.net.*;
-import java.io.*;
 
 public class MultiThreadedServer {
     public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class MultiThreadedServer {
             {
                 System.out.println("Waiting for clients...");
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("Client is connected.");
+                System.out.println("programs.Client is connected.");
                 ClientThread clientThread = new ClientThread(clientSocket);
                 clientThread.start();
             }

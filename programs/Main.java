@@ -1,3 +1,5 @@
+package programs;
+
 import java.io.*;
 import java.net.*;
 
@@ -12,7 +14,7 @@ import java.net.*;
 //
 //            // Wait for client connection
 //            Socket clientSocket = serverSocket.accept();
-//            System.out.println("Client connected...");
+//            System.out.println("programs.Client connected...");
 //
 //            // Create input and output streams for the client socket
 //            BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
@@ -41,7 +43,7 @@ public class Main {
              System.out.println("Waiting for the client");
              Socket socket = serverSocket.accept();
              PrintWriter out = new PrintWriter(socket.getOutputStream(),true);
-             out.println("Hello Client");
+             out.println("Hello programs.Client");
              BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              String clientInput = input.readLine();
              System.out.println(clientInput);
