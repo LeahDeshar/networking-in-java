@@ -11,9 +11,6 @@ public class InetClassExampleOne {
              inetAddressGoogle = InetAddress.getByName("www.google.com");
             inetAddressFacebook = InetAddress.getByName("www.facebook.com");
             inetAddressBern = InetAddress.getByName("kbc.edu.np");
-
-
-
             // Get the IP address
             String ipAddressGoogle,ipAddressFacebook,ipAddressBern;
             ipAddressGoogle = inetAddressGoogle.getHostAddress();
