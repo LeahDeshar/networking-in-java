@@ -17,7 +17,7 @@ public class NetworkInterfaceName {
                 System.out.println("No Network Interface found with name: " + interfaceName);
             }
 
-         
+
 
         } catch (SocketException e) {
             throw new RuntimeException(e);
