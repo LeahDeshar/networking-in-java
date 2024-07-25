@@ -1,7 +1,7 @@
 package unit3;
-import java.io.UnsupportedEncodingException;
-import java.net.*;
-public class URLEncoder {
+import java.io.*;
+import java.net.URLEncoder;
+public class URLEncoderExample {
     public static void main(String[] args) {
         try {
             String originalString = "Hello World! @2023";

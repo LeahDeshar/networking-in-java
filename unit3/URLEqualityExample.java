@@ -1,7 +1,5 @@
 package unit3;
-
 import java.net.URL;
-
 public class URLEqualityExample {
     public static void main(String[] args) throws Exception {
         URL url1 = new URL("http://www.example.com/path/to/resource");

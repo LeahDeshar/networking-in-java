@@ -1,17 +1,12 @@
 package unit3;
-
 import java.net.URI;
 import java.net.URISyntaxException;
-
 public class URIRelativeResolveExample {
     public static void main(String[] args) throws URISyntaxException {
-        // Resolving relative URI against absolute URI
         URI absolute = new URI("http://www.example.com/");
         URI relative = new URI("images/logo.png");
         URI resolved = absolute.resolve(relative);
         System.out.println("Resolved URI: " + resolved);
-
-        // Resolving one relative URI against another relative URI
         URI top = new URI("javafaq/books/");
         URI resolvedRelative = top.resolve("jnp3/examples/07/index.html");
         System.out.println("Resolved Relative URI: " + resolvedRelative);

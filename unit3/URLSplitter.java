@@ -1,26 +1,19 @@
 package unit3;
-
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.MalformedURLException;
-
 public class URLSplitter {
     public static void main(String[] args) {
         String urlString = "https://www.example.com/path/to/resource?param1=value1&param2=value2#section";
-
         try {
             URL url = new URL(urlString);
-
-            // Get individual components of the URL
             String protocol = url.getProtocol(); // "https"
             String authority = url.getAuthority(); // "www.example.com"
             String host = url.getHost(); // "www.example.com"
             String path = url.getPath(); // "/path/to/resource"
             String query = url.getQuery(); // "param1=value1&param2=value2"
             String fragment = url.getRef(); // "section"
-
-            // Print each component
             System.out.println("URL: " + url.toString());
             System.out.println("to external links: " + url.toExternalForm());
 
